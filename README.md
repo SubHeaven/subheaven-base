@@ -1,2 +1,2 @@
 # subheaven-base
-Basic boilerplate for Express NodeJS projects
+Basic boilerplate for my Express NodeJS projects
