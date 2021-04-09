@@ -9,7 +9,7 @@ const usersRouter = require('./routes/users');
 
 const app = express();
 
-app.use(helmet);
+app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
