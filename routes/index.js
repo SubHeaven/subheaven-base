@@ -1,5 +1,5 @@
 const express = require('express');
-const log = require('debug')("subheaven-base:index")
+const log = require('debug')("subheaven:index")
 const router = express.Router();
 
 /* GET home page. */
