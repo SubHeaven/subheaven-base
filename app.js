@@ -3,7 +3,13 @@ const helmet = require('helmet');
 const favicon = require('serve-favicon');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const subheaven_crud = require('./subheaven-crud');
+
+const env = require('subheaven-env');
+env.addParams([
+    { name: 'PORT', description: 'Porta onde o sistema irá rodar.', required: false, sample: '33320' },
+]);
+env.config();
+
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -19,7 +25,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
-subheaven_crud.init('/db', app);
 
 module.exports = app;
