@@ -1,57 +1,84 @@
-POST http://127.0.0.1:33321/db/tarefa HTTP/1.1
+GET http://127.0.0.1:17060/tasks/list HTTP/1.1
+content-type: application/json
+
+###
+GET http://127.0.0.1:17060/tasks/history HTTP/1.1
+content-type: application/json
+
+###
+POST http://127.0.0.1:17060/tasks/add HTTP/1.1
 content-type: application/json
 
 {
-    "nome": "Tarefa Um",
-    "descricao": "Testar a inserção da tarefa um."
+    "nome": "Malha Antecipada",
+    "caminho": "C:\\iacon\\spool\\xmls\\100 LIMITS MOTORSPORTS EIRELI - 2\\2021\\12\\Entradas\\NF-e\\41211210876168000119550010000296731082920710.xml",
+    "chave": "41211210876168000119550010000296731082920710",
+    "empresa": "2",
+    "comando": "python3 {services}\\tools\\internal_process\\nfe.py -foldered -empresa=2 \"C:\\iacon\\spool\\xmls\\100 LIMITS MOTORSPORTS EIRELI - 2\\2021\\12\\Entradas\\CT-e\\41211210876168000119550010000296731082920710.xml\""
 }
 
 ###
 
-POST http://127.0.0.1:33321/db/tarefa HTTP/1.1
+POST http://127.0.0.1:17060/tasks/add HTTP/1.1
 content-type: application/json
 
 {
-    "nome": "Tarefa Dois",
-    "descricao": "Testar a inserção da tarefa dois.",
-    "concluido": true
+    "nome": "Malha Antecipada",
+    "caminho": "C:\\iacon\\spool\\xmls\\100 LIMITS MOTORSPORTS EIRELI - 2\\2021\\12\\Entradas\\NF-e\\41211211049316000275570010000501421100510169.xml",
+    "chave": "41211211049316000275570010000501421100510169",
+    "empresa": "2",
+    "comando": "python3 {services}\\tools\\internal_process\\nfe.py -foldered -empresa=2 \"C:\\iacon\\spool\\xmls\\100 LIMITS MOTORSPORTS EIRELI - 2\\2021\\12\\Entradas\\CT-e\\41211211049316000275570010000501421100510169.xml\""
 }
 
 ###
 
-POST http://127.0.0.1:33321/db/tarefa HTTP/1.1
+POST http://127.0.0.1:17060/tasks/add HTTP/1.1
 content-type: application/json
 
 {
-    "nome": "Tarefa Três",
-    "descricao": "Testar a inserção da tarefa três."
+    "nome": "Consolidar Empresas",
+    "comando": "python3 {services}\\tools\\GeradorDeErro.py"
 }
 
 ###
 
-PUT http://127.0.0.1:33321/db/tarefa HTTP/1.127
+POST http://127.0.0.1:17060/tasks/add HTTP/1.1
 content-type: application/json
 
 {
-    "id": 3,
-    "nome": "Tarefa Três Alterada"
+    "nome": "Consolidar Empresas",
+    "comando": "python3 {services}\\tools\\ConsolidarEmpresasVigencias.py 01 2020"
 }
 
 ###
 
-PUT http://127.0.0.1:33321/db/tarefa HTTP/1.127
+POST http://127.0.0.1:17060/tasks/add HTTP/1.1
 content-type: application/json
 
 {
-    "id": 3,
-    "concluido": true
+    "nome": "Malha Antecipada",
+    "caminho": "C:\\iacon\\spool\\xmls\\100 LIMITS MOTORSPORTS EIRELI - 2\\2021\\12\\Entradas\\NF-e\\52211230648025000167550010000076131320849573_canc.xml",
+    "chave": "52211230648025000167550010000076131320849573",
+    "empresa": "2",
+    "comando": "python3 {services}\\tools\\internal_process\\nfe.py -foldered -empresa=2 \"C:\\iacon\\spool\\xmls\\100 LIMITS MOTORSPORTS EIRELI - 2\\2021\\12\\Entradas\\CT-e\\52211230648025000167550010000076131320849573_canc.xml\""
 }
 
 ###
 
-DELETE http://127.0.0.1:33321/db/tarefa HTTP/1.127
+POST http://127.0.0.1:17060/tasks/add HTTP/1.1
 content-type: application/json
 
 {
-    "id": 2
+    "nome": "Consolidar Empresas",
+    "comando": "python3 {services}\\tools\\GeradorDeErro.py"
 }
+
+###
+
+POST http://127.0.0.1:17060/tasks/execute HTTP/1.1
+content-type: application/json
+
+###
+
+GET http://127.0.0.1:17060/tasks/teste HTTP/1.1
+content-type: application/json

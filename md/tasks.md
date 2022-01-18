@@ -1,6 +1,3 @@
-# iacon-task-queue
-Micro serviço responsável por gerenciar e processar uma fila de tarefas dentro do ecossistema do Iacon
-
 ## Lista de URLs da API
 
 ---
