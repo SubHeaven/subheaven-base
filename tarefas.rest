@@ -2,83 +2,8 @@ GET http://127.0.0.1:17060/tasks/list HTTP/1.1
 content-type: application/json
 
 ###
+
 GET http://127.0.0.1:17060/tasks/history HTTP/1.1
 content-type: application/json
 
 ###
-POST http://127.0.0.1:17060/tasks/add HTTP/1.1
-content-type: application/json
-
-{
-    "nome": "Malha Antecipada",
-    "caminho": "C:\\iacon\\spool\\xmls\\100 LIMITS MOTORSPORTS EIRELI - 2\\2021\\12\\Entradas\\NF-e\\41211210876168000119550010000296731082920710.xml",
-    "chave": "41211210876168000119550010000296731082920710",
-    "empresa": "2",
-    "comando": "python3 {services}\\tools\\internal_process\\nfe.py -foldered -empresa=2 \"C:\\iacon\\spool\\xmls\\100 LIMITS MOTORSPORTS EIRELI - 2\\2021\\12\\Entradas\\CT-e\\41211210876168000119550010000296731082920710.xml\""
-}
-
-###
-
-POST http://127.0.0.1:17060/tasks/add HTTP/1.1
-content-type: application/json
-
-{
-    "nome": "Malha Antecipada",
-    "caminho": "C:\\iacon\\spool\\xmls\\100 LIMITS MOTORSPORTS EIRELI - 2\\2021\\12\\Entradas\\NF-e\\41211211049316000275570010000501421100510169.xml",
-    "chave": "41211211049316000275570010000501421100510169",
-    "empresa": "2",
-    "comando": "python3 {services}\\tools\\internal_process\\nfe.py -foldered -empresa=2 \"C:\\iacon\\spool\\xmls\\100 LIMITS MOTORSPORTS EIRELI - 2\\2021\\12\\Entradas\\CT-e\\41211211049316000275570010000501421100510169.xml\""
-}
-
-###
-
-POST http://127.0.0.1:17060/tasks/add HTTP/1.1
-content-type: application/json
-
-{
-    "nome": "Consolidar Empresas",
-    "comando": "python3 {services}\\tools\\GeradorDeErro.py"
-}
-
-###
-
-POST http://127.0.0.1:17060/tasks/add HTTP/1.1
-content-type: application/json
-
-{
-    "nome": "Consolidar Empresas",
-    "comando": "python3 {services}\\tools\\ConsolidarEmpresasVigencias.py 01 2020"
-}
-
-###
-
-POST http://127.0.0.1:17060/tasks/add HTTP/1.1
-content-type: application/json
-
-{
-    "nome": "Malha Antecipada",
-    "caminho": "C:\\iacon\\spool\\xmls\\100 LIMITS MOTORSPORTS EIRELI - 2\\2021\\12\\Entradas\\NF-e\\52211230648025000167550010000076131320849573_canc.xml",
-    "chave": "52211230648025000167550010000076131320849573",
-    "empresa": "2",
-    "comando": "python3 {services}\\tools\\internal_process\\nfe.py -foldered -empresa=2 \"C:\\iacon\\spool\\xmls\\100 LIMITS MOTORSPORTS EIRELI - 2\\2021\\12\\Entradas\\CT-e\\52211230648025000167550010000076131320849573_canc.xml\""
-}
-
-###
-
-POST http://127.0.0.1:17060/tasks/add HTTP/1.1
-content-type: application/json
-
-{
-    "nome": "Consolidar Empresas",
-    "comando": "python3 {services}\\tools\\GeradorDeErro.py"
-}
-
-###
-
-POST http://127.0.0.1:17060/tasks/execute HTTP/1.1
-content-type: application/json
-
-###
-
-GET http://127.0.0.1:17060/tasks/teste HTTP/1.1
-content-type: application/json
